@@ -1,6 +1,5 @@
 export { default as Header } from "./Header/index";
 export { default as CardOptions } from "./CardOptions/index";
-export { default as Button } from "./Button/index";
 export { default as CardSelectedOption } from "./CardSelectedOption/index";
 export { default as CardGame } from "./CardGame/index";
 export { default as ScoreGame } from "./ScoreGame/index";
