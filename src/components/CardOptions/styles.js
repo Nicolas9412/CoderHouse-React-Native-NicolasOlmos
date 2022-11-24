@@ -21,5 +21,24 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-evenly",
   },
-  optionImage: { width: 60, height: 60 },
+  imageContainer: {
+    padding: 10,
+  },
+  optionImage: {
+    width: 60,
+    height: 60,
+  },
+  imageSeleted: {
+    borderStyle: "dashed",
+    borderWidth: 2,
+    borderColor: "rgba(161,155,183,1)",
+    borderRadius: 3,
+    padding: 5,
+  },
+  btnContainer: {
+    marginTop: 20,
+    flexDirection: "row",
+    width: "60%",
+    justifyContent: "space-between",
+  },
 });
