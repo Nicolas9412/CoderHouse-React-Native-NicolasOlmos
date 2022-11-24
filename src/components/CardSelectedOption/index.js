@@ -5,7 +5,7 @@ import selectedImage from "../../utils/selectedImage";
 const CardSelectedOption = ({ selectedOption, onHandleStartGame }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Option selected</Text>
+      <Text style={styles.title}>Selected Option </Text>
       <Image
         style={styles.optionImage}
         source={selectedImage(selectedOption)}
