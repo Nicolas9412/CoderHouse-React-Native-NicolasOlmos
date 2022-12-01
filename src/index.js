@@ -1,6 +1,7 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import MovieNavigator from "../navigation/MovieNavigator";
+import { View, ActivityIndicator } from "react-native";
 import { useFonts } from "expo-font";
+import { styles } from "./styles";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -11,20 +12,12 @@ export default function App() {
     "OpenSans-Italic": require("../assets/fonts/OpenSans-Italic.ttf"),
   });
 
-  if (!loaded) return null;
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  if (!loaded) {
+    return (
+      <View style={styles.loaderContainer}>
+        <ActivityIndicator size="large" color={"#EF7C8E"} />
+      </View>
+    );
+  }
+  return <MovieNavigator />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
