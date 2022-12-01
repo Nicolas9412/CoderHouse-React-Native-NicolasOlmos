@@ -5,8 +5,7 @@ export const movies = [
       "An assassin accepts one last blow in hopes of using his earnings to restore sight to a singer he accidentally blinded, and was later betrayed.",
     duration: 111,
     premiere: "1989",
-    photo:
-      "https://www.imdb.com/title/tt0097202/mediaviewer/rm3432389633/?ref_=tt_ov_i",
+    photo: "https://m.media-amazon.com/images/I/51ypDuzTM9L._SY445_.jpg",
     category: "action",
     director: "John Woo",
     mainCast: ["Chow Yun-Fat", "Danny Lee", "Sally Yeh"],
@@ -18,7 +17,7 @@ export const movies = [
     duration: 128,
     premiere: "1992",
     photo:
-      "https://www.imdb.com/title/tt0104684/mediaviewer/rm3852082177/?ref_=tt_ov_i",
+      "https://m.media-amazon.com/images/M/MV5BM2M1MDMzODEtN2MzZC00NDJmLWJhMTMtNGUxYjM1ZmJlY2RkXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg",
     category: "action",
     director: "John Woo",
     mainCast: ["Chow Yun-Fat", "Tony Chiu-Wai Leung", "Teresa Mo"],
@@ -30,7 +29,7 @@ export const movies = [
     duration: 90,
     premiere: "1985",
     photo:
-      "https://www.imdb.com/title/tt0088944/mediaviewer/rm2706311936/?ref_=tt_ov_i",
+      "https://deff.com/image/magictoolbox_cache/feabb61ae2a71c1844359f7cbe8b5d82/3/0/30749_product/original/3896274755/th8C28sCKy_X_NUUSUSvRw.jpg",
     category: "action",
     director: "Mark L. Lester",
     mainCast: ["Arnold Schwarzenegger", "Rae Dawn Chong", "Dan Hedaya"],
@@ -42,7 +41,7 @@ export const movies = [
     duration: 118,
     premiere: "2009",
     photo:
-      "https://www.imdb.com/title/tt1046173/mediaviewer/rm1274055936/?ref_=tt_ov_i",
+      "https://m.media-amazon.com/images/M/MV5BMTQzMTU1NzQwNl5BMl5BanBnXkFtZTcwNDg4NzMzMw@@._V1_.jpg",
     category: "action",
     director: "Stephen Sommers",
     mainCast: ["Dennis Quaid", "Channing Tatum", "Marlon Wayans"],
@@ -54,7 +53,7 @@ export const movies = [
     duration: 144,
     premiere: "2006",
     photo:
-      "https://www.imdb.com/title/tt0381061/mediaviewer/rm119363072/?ref_=tt_ov_i",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwQKd5Xl0Pn58cCpG-he8cagL9PLQ-DtQA-A&usqp=CAU",
     category: "action",
     director: "Martin Campbell",
     mainCast: ["Daniel Craig", "Eva Green", "Judi Dench"],
@@ -65,8 +64,7 @@ export const movies = [
       "IMF agent Ethan Hunt comes into conflict with a dangerous and sadistic arms dealer who threatens his life and his fiancée in response.",
     duration: 126,
     premiere: "2006",
-    photo:
-      "https://www.imdb.com/title/tt0317919/mediaviewer/rm1980503040/?ref_=tt_ov_i",
+    photo: "https://es.web.img3.acsta.net/pictures/14/02/26/10/46/064087.jpg",
     category: "action",
     director: "J.J. Abrams",
     mainCast: ["Tom Cruise", "Michelle Monaghan", "Ving Rhames"],
@@ -77,8 +75,7 @@ export const movies = [
       "A defense officer, Nameless, was summoned by the King of Qin regarding his success of terminating three warriors.",
     duration: 120,
     premiere: "2002",
-    photo:
-      "https://www.imdb.com/title/tt0299977/mediaviewer/rm2369716224/?ref_=tt_ov_i",
+    photo: "https://www.ecartelera.com/carteles/5300/5313/001_m.jpg",
     category: "action",
     director: "Yimou Zhang",
     mainCast: ["Jet Li", "Tony Chiu-Wai Leung", "Maggie Cheung"],
@@ -90,7 +87,7 @@ export const movies = [
     duration: 120,
     premiere: "2000",
     photo:
-      "https://www.imdb.com/title/tt0190332/mediaviewer/rm2202866688/?ref_=tt_ov_i",
+      "https://media0001.elcinema.com/uploads/_315x420_aad863b1cb5275d15d3473b758365db1d22a1fc1c9202f3f86f34bd97288b0aa.jpg",
     category: "action",
     director: "Ang Lee",
     mainCast: ["Chow Yun-Fat", "Michelle Yeoh", "Ziyi Zhang"],
@@ -102,7 +99,7 @@ export const movies = [
     duration: 124,
     premiere: "2004",
     photo:
-      "https://www.imdb.com/title/tt0319262/mediaviewer/rm131340801/?ref_=tt_ov_i",
+      "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/41848f317fc1c5dd2ec3230b1d8b19a38ec6daddd752d02bd20cf6d4967cd350._RI_V_TTW_.jpg",
     category: "action",
     director: "Roland Emmerich",
     mainCast: ["Dennis Quaid", "Jake Gyllenhaal", "Emmy Rossum"],
@@ -114,7 +111,7 @@ export const movies = [
     duration: 108,
     premiere: "1997",
     photo:
-      "https://www.imdb.com/title/tt0118928/mediaviewer/rm1776359168/?ref_=tt_ov_i",
+      "https://es.web.img3.acsta.net/medias/nmedia/18/91/19/84/20145006.jpg",
     category: "action",
     director: "Roland Emmerich",
     mainCast: ["Pierce Brosnan", "Jake Gyllenhaal", "Jamie Renée Smith"],
@@ -126,7 +123,7 @@ export const movies = [
     duration: 115,
     premiere: "1981",
     photo:
-      "https://www.imdb.com/title/tt0082971/mediaviewer/rm2091520257/?ref_=tt_ov_i",
+      "https://media0001.elcinema.com/uploads/_315x420_0b94528ee4be334fb7c0fcd061fcb4fe3544eb05280791f7c9452f768405aaa7.jpg",
     category: "action",
     director: "Steven Spielberg",
     mainCast: ["Harrison Ford", "Karen Allen", "Paul Freeman"],
@@ -137,8 +134,7 @@ export const movies = [
       "The story of T.E. Lawrence, the English officer who successfully united and led the diverse, often warring, Arab tribes during World War I in order to fight the Turks.",
     duration: 218,
     premiere: "1962",
-    photo:
-      "https://www.imdb.com/title/tt0056172/mediaviewer/rm1206326272/?ref_=tt_ov_i",
+    photo: "https://m.media-amazon.com/images/I/51MGIXsVpcL._AC_SY580_.jpg",
     category: "action",
     director: "David Lean",
     mainCast: ["Peter O'Toole", "Alec Guinness", "Anthony Quinn"],
@@ -150,7 +146,7 @@ export const movies = [
     duration: 126,
     premiere: "2008",
     photo:
-      "https://www.imdb.com/title/tt0371746/mediaviewer/rm1544850432/?ref_=tt_ov_i",
+      "https://static.wikia.nocookie.net/marvelcinematicuniverse/images/b/bf/Iron_Man_1_Portada.png/revision/latest?cb=20191029194450&path-prefix=es",
     category: "action",
     director: "Jon Favreau",
     mainCast: ["Robert Downey Jr.", "Gwyneth Paltrow", "Terrence Howard"],
@@ -162,7 +158,7 @@ export const movies = [
     duration: 132,
     premiere: "2014",
     photo:
-      "https://www.imdb.com/title/tt1877832/mediaviewer/rm1001448448/?ref_=tt_ov_i",
+      "https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg",
     category: "action",
     director: "Bryan Singer",
     mainCast: ["Patrick Stewart", "Ian McKellen", "Hugh Jackman"],
@@ -174,7 +170,7 @@ export const movies = [
     duration: 83,
     premiere: "1973",
     photo:
-      "https://www.imdb.com/title/tt0070608/mediaviewer/rm980616192/?ref_=tt_ov_i",
+      "https://lumiere-a.akamaihd.net/v1/images/p_robinhood_19884_95b7d851.jpeg?region=0%2C0%2C540%2C810",
     category: "animation",
     director: ["Wolfgang Reitherman", "David Hand"],
     mainCast: ["Brian Bedford", "Phil Harris", "Roger Miller"],
@@ -186,7 +182,7 @@ export const movies = [
     duration: 95,
     premiere: "1973",
     photo:
-      "https://www.imdb.com/title/tt0070608/mediaviewer/rm980616192/?ref_=tt_ov_i",
+      "https://upload.wikimedia.org/wikipedia/en/5/5e/FlightofDragonsDVD.jpg",
     category: "animation",
     director: ["Jules Bass", "Arthur Rankin Jr."],
     mainCast: ["Victor Buono", "James Gregory", "James Earl Jones"],
@@ -198,7 +194,7 @@ export const movies = [
     duration: 76,
     premiere: "1993",
     photo:
-      "https://www.imdb.com/title/tt0107688/mediaviewer/rm2164460544/?ref_=tt_ov_i",
+      "https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_.jpg",
     category: "animation",
     director: "Henry Selick",
     mainCast: ["Danny Elfman", "Chris Sarandon", "Catherine O'Hara"],
@@ -210,7 +206,7 @@ export const movies = [
     duration: 87,
     premiere: "2009",
     photo:
-      "https://www.imdb.com/title/tt0432283/mediaviewer/rm329928960/?ref_=tt_ov_i",
+      "https://dyn1.heritagestatic.com/lf?set=path%5B2%2F0%2F9%2F4%2F6%2F20946727%5D&call=url%5Bfile%3Aproduct.chain%5D",
     category: "animation",
     director: "Wes Anderson",
     mainCast: ["George Clooney", "Meryl Streep", "Bill Murray"],

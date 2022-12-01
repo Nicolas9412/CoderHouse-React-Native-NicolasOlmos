@@ -10,10 +10,7 @@ const Movie = ({ navigation, route }) => {
     <ScrollView style={styles.container}>
       <Header title={item.title} />
       <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={require("../../../assets/icon.png")}
-        />
+        <Image style={styles.image} source={{ uri: item.photo }} />
       </View>
       <View>
         <Text style={styles.titleMovie}>{item.title}</Text>
