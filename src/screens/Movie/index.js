@@ -1,4 +1,4 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, ScrollView } from "react-native";
 import { Header } from "../../components";
 import { styles } from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
@@ -7,7 +7,7 @@ const Movie = ({ navigation, route }) => {
   const { item } = route.params;
   console.log(item);
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header title={item.title} />
       <View style={styles.imageContainer}>
         <Image
@@ -50,7 +50,7 @@ const Movie = ({ navigation, route }) => {
           ))}
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

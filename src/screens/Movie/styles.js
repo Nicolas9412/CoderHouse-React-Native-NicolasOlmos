@@ -18,11 +18,12 @@ export const styles = StyleSheet.create({
     height: 300,
   },
   titleMovie: {
+    width: "80%",
     fontSize: 18,
     fontFamily: "OpenSans-Italic",
     color: "#FFF",
     marginTop: 20,
-    marginLeft: 30,
+    marginLeft: 25,
   },
   descriptionContainer: {
     borderRadius: 5,
