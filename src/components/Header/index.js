@@ -1,8 +1,8 @@
-import { Text } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "./styles";
 
-const Header = ({ title }) => {
+const Header = ({ title, navigation }) => {
   return (
     <LinearGradient
       colors={["#DB0000", "rgba(255, 0, 0, 0)"]}
