@@ -1,8 +1,8 @@
 export const ORDERS = [
   {
     id: 1,
-    date: 1670527740,
-    total: 250,
+    date: 1633996712968,
+    total: 95,
     items: [
       {
         id: 2,

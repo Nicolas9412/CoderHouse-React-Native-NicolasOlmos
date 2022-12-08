@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { CartItem } from "../../components";
 
 const Cart = () => {
-  const total = 250;
+  const total = 95;
 
   const handleDelete = (item) => {
     console.log("Food deleted");
