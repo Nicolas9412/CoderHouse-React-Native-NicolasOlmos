@@ -1,9 +1,9 @@
 import { Text, View, Image } from "react-native";
 import { styles } from "./styles";
-import { FOODS } from "../../data";
+import { useSelector } from "react-redux";
 
 const FoodDetail = ({ route }) => {
-  const food = FOODS.find((food) => food.id == route.params.foodID);
+  const food = useSelector((state) => state.products.selected);
   return (
     <View style={styles.container}>
       <Image source={food.photo} style={styles.photo} />

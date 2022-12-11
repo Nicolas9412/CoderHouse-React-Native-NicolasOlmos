@@ -1,8 +1,9 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import { styles } from "./styles";
 import { useFonts } from "expo-font";
 import AppNavigation from "./navigation";
+import { Provider } from "react-redux";
+import store from "./store";
 
 export default function App() {
   const [loaded] = useFonts({
@@ -20,5 +21,9 @@ export default function App() {
     );
   }
 
-  return <AppNavigation />;
+  return (
+    <Provider store={store}>
+      <AppNavigation />
+    </Provider>
+  );
 }
