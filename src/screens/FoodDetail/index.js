@@ -2,7 +2,7 @@ import { Text, View, Image } from "react-native";
 import { styles } from "./styles";
 import { useSelector } from "react-redux";
 
-const FoodDetail = ({ route }) => {
+const FoodDetail = () => {
   const food = useSelector((state) => state.products.selected);
   return (
     <View style={styles.container}>
