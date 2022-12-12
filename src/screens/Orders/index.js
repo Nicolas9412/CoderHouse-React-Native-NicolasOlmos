@@ -1,11 +1,23 @@
 import { FlatList } from "react-native";
 import { styles } from "./styles";
-import { ORDERS } from "../../data/orders";
 import { OrderItem } from "../../components";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useCallback } from "react";
+import { getOrders, deleteOrder } from "../../store/actions";
+import { useFocusEffect } from "@react-navigation/native";
 
 const Orders = () => {
-  const handleDelete = () => {
-    console.log("Order deleted");
+  const orders = useSelector((state) => state.orders.list);
+  const dispatch = useDispatch();
+
+  useFocusEffect(
+    useCallback(() => {
+      dispatch(getOrders());
+    }, [dispatch])
+  );
+
+  const handleDelete = (id) => {
+    dispatch(deleteOrder(id));
   };
 
   const renderItemOrder = ({ item }) => (
@@ -13,7 +25,7 @@ const Orders = () => {
   );
   return (
     <FlatList
-      data={ORDERS}
+      data={orders}
       keyExtractor={(item) => item.id}
       renderItem={renderItemOrder}
     />

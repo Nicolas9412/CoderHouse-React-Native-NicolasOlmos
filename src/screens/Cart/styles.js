@@ -1,21 +1,30 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../constants/colors";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 12,
-    backgroundColor: "#fff",
+    backgroundColor: COLORS.white,
   },
   list: {
     flex: 1,
   },
   footer: {
     padding: 12,
-    borderTopColor: "#ccc",
+    borderTopColor: COLORS.gray,
     borderTopWidth: 1,
   },
   confirm: {
-    backgroundColor: "#ccc",
+    backgroundColor: COLORS.secondary,
+    borderRadius: 10,
+    padding: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  btnDisabled: {
+    backgroundColor: COLORS.gray,
     borderRadius: 10,
     padding: 10,
     flexDirection: "row",
