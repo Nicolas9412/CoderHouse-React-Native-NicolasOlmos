@@ -2,7 +2,6 @@ import {
   View,
   Text,
   KeyboardAvoidingView,
-  TextInput,
   Button,
   TouchableOpacity,
 } from "react-native";
@@ -12,11 +11,41 @@ import { useState } from "react";
 import { isAndroid } from "../../utils";
 import { useDispatch } from "react-redux";
 import { signUp, signIn } from "../../store/actions";
+import Input from "../../components/Input";
+import { useReducer } from "react";
+import { onInputChange, UPDATE_FORM } from "../../utils/form";
+
+const initialState = {
+  email: { value: "", error: "", touched: false, hasError: true },
+  password: { value: "", error: "", touched: false, hasError: true },
+  isFormValid: false,
+};
+
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case UPDATE_FORM:
+      const { name, value, hasError, error, touched, isFormValid } =
+        action.data;
+      return {
+        ...state,
+        [name]: {
+          ...state[name],
+          value,
+          hasError,
+          error,
+          touched,
+        },
+        isFormValid,
+      };
+
+    default:
+      return state;
+  }
+};
 
 const Auth = ({ navigation }) => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [formState, dispatchFormState] = useReducer(formReducer, initialState);
   const [isLogin, setIsLogin] = useState(true);
   const title = isLogin ? "Login" : "Register";
   const message = isLogin
@@ -25,8 +54,17 @@ const Auth = ({ navigation }) => {
   const messageAction = isLogin ? "Login" : "Register";
 
   const onHandleSubmit = () => {
-    dispatch(isLogin ? signIn(email, password) : signUp(email, password));
+    dispatch(
+      isLogin
+        ? signIn(formState.email.value, formState.password.value)
+        : signUp(formState.email.value, formState.password.value)
+    );
   };
+
+  const onHandleChangeInput = (value, type) => {
+    onInputChange(type, value, dispatchFormState, formState);
+  };
+
   return (
     <KeyboardAvoidingView
       style={styles.keyboardAvoidingView}
@@ -35,37 +73,41 @@ const Auth = ({ navigation }) => {
     >
       <View style={styles.container}>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.label}>Email</Text>
-        <TextInput
-          style={styles.input}
+        <Input
+          label="Email"
           placeholder="Enter your email"
           placeholderTextColor={COLORS.gray}
           keyboardType="email-address"
           autoCapitalize="none"
           autoCorrect={false}
-          value={email}
+          value={formState.email.value}
+          hasError={formState.email.hasError}
+          error={formState.email.error}
+          touched={formState.email.touched}
           onChangeText={(text) => {
-            setEmail(text);
+            onHandleChangeInput(text, "email");
           }}
         />
-        <Text style={styles.label}>Password</Text>
-        <TextInput
-          style={styles.input}
+        <Input
+          label="Password"
           placeholder="Enter your password"
           placeholderTextColor={COLORS.gray}
           secureTextEntry={true}
           autoCapitalize="none"
           autoCorrect={false}
-          value={password}
+          value={formState.password.value}
+          hasError={formState.password.hasError}
+          error={formState.password.error}
+          touched={formState.password.touched}
           onChangeText={(text) => {
-            setPassword(text);
+            onHandleChangeInput(text, "password");
           }}
         />
         <Button
           color={COLORS.primary}
           title={messageAction}
           onPress={onHandleSubmit}
-          disabled={!email || !password}
+          disabled={!formState.isFormValid}
         />
         <View style={styles.prompt}>
           <TouchableOpacity

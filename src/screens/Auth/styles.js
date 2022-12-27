@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   container: {
     width: "80%",
     maxWidth: 400,
+    minHeight: 320,
     padding: 15,
     margin: 15,
     borderColor: COLORS.primary,
@@ -27,14 +28,6 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: "OpenSans-Regular",
     marginVertical: 5,
-  },
-  input: {
-    height: 45,
-    borderBottomColor: COLORS.primary,
-    borderBottomWidth: 1,
-    width: "90%",
-    fontFamily: "OpenSans-Regular",
-    marginBottom: 10,
   },
   prompt: {
     width: "100%",
