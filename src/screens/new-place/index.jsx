@@ -2,16 +2,17 @@ import { View, Text, ScrollView, TextInput, Button } from "react-native";
 import { useDispatch } from "react-redux";
 import colors from "../../utils/colors";
 import { styles } from "./styles";
-import { addPlace } from "../../store/place.slice";
+import { savePlace } from "../../store/place.slice";
 import { useState } from "react";
 import { ImageSelector } from "../../components";
 
 const NewPlace = ({ navigation }) => {
   const [title, setTitle] = useState("");
+  const [image, setImage] = useState(null);
   const dispatch = useDispatch();
 
   const onHandleSubmit = () => {
-    dispatch(addPlace({ title }));
+    dispatch(savePlace({ title, image }));
     navigation.navigate("Places");
   };
 
@@ -20,7 +21,7 @@ const NewPlace = ({ navigation }) => {
   };
 
   const onImagePicker = (uri) => {
-    console.warn(uri);
+    setImage(uri);
   };
 
   return (
