@@ -4,7 +4,7 @@ import colors from "../../utils/colors";
 import { styles } from "./styles";
 import { savePlace } from "../../store/place.slice";
 import { useState } from "react";
-import { ImageSelector } from "../../components";
+import { ImageSelector, LocationSelector } from "../../components";
 
 const NewPlace = ({ navigation }) => {
   const [title, setTitle] = useState("");
@@ -24,6 +24,8 @@ const NewPlace = ({ navigation }) => {
     setImage(uri);
   };
 
+  const onLocationPicker = ({ lat, lng }) => {};
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
@@ -34,6 +36,7 @@ const NewPlace = ({ navigation }) => {
           onChangeText={onHandleChange}
         />
         <ImageSelector onImagePicker={onImagePicker} />
+        <LocationSelector onLocationPicker={onLocationPicker} />
         <Button color={colors.primary} title="Guardar direccion" onPress={onHandleSubmit} />
       </View>
     </ScrollView>
