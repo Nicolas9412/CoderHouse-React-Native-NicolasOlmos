@@ -36,8 +36,6 @@ export const savePlace = ({ title, image, coords }) => {
 
       const data = await response.json();
 
-      console.log("data", data);
-
       if (!data.results) throw new Error("no se encontró una dirección");
 
       const adress = data.results[0].formatted_address;
