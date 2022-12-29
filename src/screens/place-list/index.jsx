@@ -1,10 +1,17 @@
 import { View, Text, FlatList } from "react-native";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { PlaceItem } from "../../components";
 import { styles } from "./styles";
+import { useEffect } from "react";
+import { loadAddress } from "../../store/place.slice";
 
 const PlaceList = ({ navigation }) => {
   const places = useSelector((state) => state.place.places);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadAddress());
+  }, []);
 
   const renderItem = ({ item }) => (
     <PlaceItem

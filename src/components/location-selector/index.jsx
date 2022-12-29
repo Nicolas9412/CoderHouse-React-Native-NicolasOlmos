@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import { useState, useEffect } from "react";
 import colors from "../../utils/colors";
 import * as Location from "expo-location";
-import { MapPreview } from "../../components";
+import MapPreview from "../map-preview";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const LocationSelector = ({ onLocationPicker }) => {

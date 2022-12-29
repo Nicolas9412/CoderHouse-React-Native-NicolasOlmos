@@ -13,7 +13,7 @@ const PlaceDetail = ({ navigation, route }) => {
       <Image source={{ uri: place.image }} style={styles.image} />
       <View style={styles.location}>
         <View style={styles.addressContainer}>
-          <Text style={styles.adress}>{place.adress}</Text>
+          <Text style={styles.adress}>{place.address}</Text>
         </View>
         <MapPreview style={styles.map} location={{ lat: place.coords.lat, lng: place.coords.lng }}>
           <Text>La ubicación no está disponible</Text>
