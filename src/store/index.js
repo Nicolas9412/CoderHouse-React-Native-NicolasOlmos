@@ -7,6 +7,7 @@ import {
   cartReducer,
   ordersReducer,
   authReducer,
+  PlaceReducer
 } from "./reducers";
 
 const rootReducers = combineReducers({
@@ -15,6 +16,7 @@ const rootReducers = combineReducers({
   cart: cartReducer,
   orders: ordersReducer,
   auth: authReducer,
+  place: PlaceReducer,
 });
 
 export default createStore(rootReducers, applyMiddleware(thunk));

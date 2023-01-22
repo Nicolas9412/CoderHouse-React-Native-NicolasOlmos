@@ -4,6 +4,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/colors";
 import { isAndroid } from "../../utils/platForm";
 import { useSelector } from "react-redux";
+import {PlaceList} from "../../screens";
+import { MaterialIcons } from '@expo/vector-icons';
 
 import CartNavigation from "../Cart";
 import ShopNavigation from "../Shop";
@@ -76,6 +78,16 @@ const TabNavigation = () => {
               size={24}
               color={COLORS.primary}
             />
+          ), 
+        }}
+      />
+      <BottomTabs.Screen
+        name="PlacesTab"
+        component={PlaceList}
+        options={{
+          title: "Places",
+          tabBarIcon: () => (
+            <MaterialIcons name="place" size={24} color={COLORS.primary} />
           ), 
         }}
       />

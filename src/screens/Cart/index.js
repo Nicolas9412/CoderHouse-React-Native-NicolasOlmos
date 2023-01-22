@@ -7,6 +7,7 @@ import { removeFromCart, confirmCart } from "../../store/actions/cart.action";
 const Cart = () => {
   const cart = useSelector((state) => state.cart.items);
   const total = useSelector((state) => state.cart.total);
+  const place = useSelector((state)=> state.place.place);
   const dispatch = useDispatch();
 
   const onHandleDelete = (itemId) => {
@@ -14,7 +15,7 @@ const Cart = () => {
   };
 
   const onCreateOrder = () => {
-    dispatch(confirmCart(cart, total));
+    dispatch(confirmCart(cart,place, total));
   };
 
   const renderItemCart = ({ item }) => (
@@ -32,8 +33,8 @@ const Cart = () => {
       </View>
       <View style={styles.footer}>
         <TouchableOpacity
-          disabled={cart.length === 0}
-          style={cart.length === 0? styles.btnDisabled : styles.confirm}
+          disabled={cart.length === 0 || place == null}
+          style={cart.length === 0 || place == null? styles.btnDisabled : styles.confirm}
           onPress={() => onCreateOrder()}
         >
           <Text>Confirmar</Text>

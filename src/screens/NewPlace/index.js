@@ -2,24 +2,20 @@ import { View, Text, ScrollView, TextInput, Button } from "react-native";
 import { useDispatch } from "react-redux";
 import { COLORS } from "../../constants/colors";
 import { styles } from "./styles";
-//import { savePlace } from "../../store/place.slice";
+import { savePlace } from "../../store/actions";
 import { useState } from "react";
 import { ImageSelector, LocationSelector } from "../../components";
 
 const NewPlace = ({ navigation }) => {
-  const [title, setTitle] = useState("");
   const [image, setImage] = useState(null);
   const [coords, setCoords] = useState(null);
   const dispatch = useDispatch();
 
   const onHandleSubmit = () => {
-    dispatch(savePlace({ title, image, coords }));
-    navigation.navigate("Places");
+    dispatch(savePlace({ image, coords }));
+    navigation.navigate("Cart");
   };
 
-  const onHandleChange = (text) => {
-    setTitle(text);
-  };
 
   const onImagePicker = (uri) => {
     setImage(uri);
@@ -32,15 +28,11 @@ const NewPlace = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Titulo</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Escribe el titulo"
-          onChangeText={onHandleChange}
-        />
+        <Text style={styles.label}>Comprobante de pago</Text>
         <ImageSelector onImagePicker={onImagePicker} />
+        <Text style={styles.label}>Direccion de entrega</Text>
         <LocationSelector onLocationPicker={onLocationPicker} />
-        <Button color={COLORS.primary} title="Guardar direccion" onPress={onHandleSubmit} />
+        <Button color={COLORS.primary} title="Guardar Detalles" onPress={onHandleSubmit} />
       </View>
     </ScrollView>
   );

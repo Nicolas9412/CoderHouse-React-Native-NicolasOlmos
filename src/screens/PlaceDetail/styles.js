@@ -5,10 +5,12 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+
   image: {
-    height: "40%",
+    height: "20%",
     minHeight: 300,
-    width: "100%",
+    width: "90%",
+    margin: 20,
   },
   location: {
     margin: 20,
@@ -29,4 +31,14 @@ export const styles = StyleSheet.create({
     color: COLORS.primary,
     textAlign: "center",
   },
+  list: {
+    flex: 1,
+    marginLeft: 20
+  },
+  title:{
+    fontFamily: "OpenSans-Bold",
+    fontSize:18,
+    marginVertical:10,
+    marginLeft: 20
+  }
 });

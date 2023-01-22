@@ -12,7 +12,7 @@ export const removeFromCart = (id) => ({
   id,
 });
 
-export const confirmCart = (items, total) => {
+export const confirmCart = (items,place, total) => {
   return async (dispatch) => {
     try {
       const response = await fetch(`${URL_BASE}/orders.json`, {
@@ -20,6 +20,7 @@ export const confirmCart = (items, total) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           date: Date.now(),
+          place,
           items,
           total,
         }),

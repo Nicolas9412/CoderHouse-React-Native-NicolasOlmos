@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Image } from "react-native";
-import { URL_MAPS } from "../../constants/index";
+import { URL_MAPS } from "../../constants";
 import { styles } from "./styles";
 
 const MapPreview = ({ children, location, style }) => {

@@ -3,13 +3,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { COLORS } from "../../constants/colors";
 
-const OrderItem = ({ item, onDelete }) => {
+const OrderItem = ({ item, onDelete, onSelect }) => {
   const formatDate = (time) => {
     const date = new Date(time);
     return date.toLocaleDateString();
   };
   return (
-    <View style={styles.order}>
+    <TouchableOpacity style={styles.order} onPress={() => onSelect(item)}>
       <View>
         <Text style={styles.date}>{formatDate(item.date)}</Text>
         <Text style={styles.total}>${item.total}</Text>
@@ -19,7 +19,7 @@ const OrderItem = ({ item, onDelete }) => {
           <Ionicons name="trash" size={30} color={COLORS.text} />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

@@ -19,4 +19,9 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
     padding: 5,
   },
+  label: {
+    fontFamily: "OpenSans-Bold",
+    fontSize: 18,
+    marginBottom: 15,
+  },
 });

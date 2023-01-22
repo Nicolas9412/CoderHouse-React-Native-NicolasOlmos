@@ -8,3 +8,4 @@ export { default as ImageSelector } from "./ImageSelector/index";
 export { default as PlaceItem } from "./PlaceItem/index";
 export { default as LocationSelector } from "./LocationSelector/index";
 export { default as MapPreview } from "./MapPreview/index";
+export { default as OrderDetailItem } from "./OrderDetailItem/index";

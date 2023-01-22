@@ -1,7 +1,7 @@
 import { URL_BASE } from "../../firebase/index";
 import { ordersTypes } from "../types";
 
-const { GET_ORDERS, DELETE_ORDER } = ordersTypes;
+const { GET_ORDERS, DELETE_ORDER, SELECT_ORDER } = ordersTypes;
 
 export const getOrders = () => {
   return async (dispatch) => {
@@ -52,3 +52,8 @@ export const deleteOrder = (id) => {
       }
     };
   };
+
+  export const selectedOrder = (id) => ({
+    type: SELECT_ORDER,
+    orderId: id,
+  });

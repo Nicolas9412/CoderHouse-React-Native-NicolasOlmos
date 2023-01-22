@@ -3,11 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { PlaceItem } from "../../components";
 import { styles } from "./styles";
 import { useEffect } from "react";
-//import { loadAddress } from "../../store/place.slice";
+import { loadAddress } from "../../store/actions";
 
 const PlaceList = ({ navigation }) => {
   const places = useSelector((state) => state.place.places);
-
+console.log(places)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadAddress());

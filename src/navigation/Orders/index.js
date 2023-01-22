@@ -2,7 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { COLORS } from "../../constants/colors";
 
-import { Orders } from "../../screens";
+import { Orders,PlaceDetail } from "../../screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +25,11 @@ const OrdersNavigation = () => {
         name="Orders"
         component={Orders}
         options={{ title: "Orders" }}
+      ></Stack.Screen>
+      <Stack.Screen
+        name="PlaceDetail"
+        component={PlaceDetail}
+        options={{ title: "Detalle de orden" }}
       ></Stack.Screen>
     </Stack.Navigator>
   );

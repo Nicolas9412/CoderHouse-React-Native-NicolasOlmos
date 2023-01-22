@@ -3,10 +3,10 @@ import { styles } from "./styles";
 import { OrderItem } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useCallback } from "react";
-import { getOrders, deleteOrder } from "../../store/actions";
+import { getOrders, deleteOrder, selectedOrder } from "../../store/actions";
 import { useFocusEffect } from "@react-navigation/native";
 
-const Orders = () => {
+const Orders = ({ navigation }) => {
   const orders = useSelector((state) => state.orders.list);
   const dispatch = useDispatch();
 
@@ -20,8 +20,17 @@ const Orders = () => {
     dispatch(deleteOrder(id));
   };
 
+  const handleSelectedOrder = (item) => {
+    dispatch(selectedOrder(item.id));
+    navigation.navigate("PlaceDetail",{orderId: item.id});
+  };
+
   const renderItemOrder = ({ item }) => (
-    <OrderItem item={item} onDelete={handleDelete} />
+    <OrderItem
+      item={item}
+      onDelete={handleDelete}
+      onSelect={handleSelectedOrder}
+    />
   );
   return (
     <FlatList
