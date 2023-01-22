@@ -1,4 +1,4 @@
-import {Platform} from "react-native";
+import { Platform } from "react-native";
 
-export const ISANDROID = Platform.OS == "android";
-export const ISIOS = Platform.OS == "ios";S
+export const isAndroid = Platform.OS == "android";
+export const isIOS = Platform.OS == "ios";
