@@ -2,7 +2,7 @@ import { View, Text, ScrollView, TextInput, Button } from "react-native";
 import { useDispatch } from "react-redux";
 import { COLORS } from "../../constants/colors";
 import { styles } from "./styles";
-import { savePlace } from "../../store/actions";
+import { savePlace,loadAddress } from "../../store/actions";
 import { useState } from "react";
 import { ImageSelector, LocationSelector } from "../../components";
 
@@ -13,6 +13,7 @@ const NewPlace = ({ navigation }) => {
 
   const onHandleSubmit = () => {
     dispatch(savePlace({ image, coords }));
+    dispatch(loadAddress());
     navigation.navigate("Cart");
   };
 
