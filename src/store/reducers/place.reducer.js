@@ -1,5 +1,5 @@
 import { placeTypes } from "../types";
-import Address from "../../models/adress";
+import Place from "../../models/place";
 
 const { ADD_PLACE, LOAD_PLACES } = placeTypes;
 
@@ -12,18 +12,18 @@ const placeReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PLACE:
       console.log(action);
-      const newPlace = new Address(
-        action.id.toString(),
-        action.address,
-        action.coords
-      );
+      const newPlace = {
+        id: action.id.toString(),
+        address: action.address,
+        coords: action.coords
+      }
       return { ...state, place: newPlace };
     case LOAD_PLACES:
       return {
         ...state,
         places: action.places.map(
           (item) =>
-            new Address(item.id.toString(), item.address, {
+            new Place(item.id.toString(), item.address, {
               lat: item.lat,
               lng: item.lng,
             })

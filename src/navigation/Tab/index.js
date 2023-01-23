@@ -2,11 +2,10 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/colors";
-import { isAndroid } from "../../utils/platForm";
+import { isAndroid } from "../../utils/functions/index";
 import { useSelector } from "react-redux";
 import {PlaceList} from "../../screens";
 import { MaterialIcons } from '@expo/vector-icons';
-
 import CartNavigation from "../Cart";
 import ShopNavigation from "../Shop";
 import OrdersNavigation from "../Orders";
