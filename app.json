@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "CoderHouse-React-Native-NicolasOlmos",
+    "description": "Proyecto final desarrollo movil",
     "slug": "CoderHouse-React-Native-NicolasOlmos",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,16 +19,31 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "proyecto-final",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.nicolas9412.CoderHouseReactNativeNicolasOlmos",
+      "versionCode": 1,
+      "permissions": ["CAMARA","ACCESS_FINE_LOCATION","WRITE_EXTERNAL_STORAGE"],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAnkIzem0cIVDKZ0bVMnW9FRoXme_DQLyM"
+        }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f76d496d-cd49-4867-b347-0ca4b8045d5d"
+      }
     }
   }
 }
