@@ -9,7 +9,7 @@ export const ORDERS = [
         category: 1,
         title: "parrillada de 7 cortes",
         price: 50,
-        photo: require("../../assets/images/parrillada.png"),
+        photo: require("../../assets/images/parrillada.jpg"),
         quantity: 1,
       },
       {
@@ -17,7 +17,7 @@ export const ORDERS = [
         category: 2,
         title: "empanadas",
         price: 20,
-        photo: require("../../assets/images/empanadas.png"),
+        photo: require("../../assets/images/empanadas.jpg"),
         quantity: 4,
       },
       {
@@ -25,7 +25,7 @@ export const ORDERS = [
         category: 4,
         title: "Papas Fritas",
         price: 15,
-        photo: require("../../assets/images/papasFritas.png"),
+        photo: require("../../assets/images/papasFritas.jpg"),
         quantity: 1,
       },
       {
@@ -33,7 +33,7 @@ export const ORDERS = [
         category: 3,
         title: "brownie con helado",
         price: 10,
-        photo: require("../../assets/images/brownieHelado.png"),
+        photo: require("../../assets/images/brownieHelado.jpg"),
         quantity: 2,
       },
     ],
